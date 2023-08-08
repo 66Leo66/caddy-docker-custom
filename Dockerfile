@@ -1,4 +1,4 @@
-ARG CADDY_VERSION=2.6.1
+ARG CADDY_VERSION=2.7.3
 # FROM caddy:${CADDY_VERSION}-builder AS builder
 FROM caddy:builder AS builder
 
