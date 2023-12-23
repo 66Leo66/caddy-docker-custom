@@ -1,5 +1,5 @@
-ARG CADDY_VERSION=2.7.5
-FROM caddy:${CADDY_VERSION}-builder AS builder
+ARG CADDY_VERSION=2.7.6
+FROM caddy:${CADDY_VERSION}-builder-alpine AS builder
 # FROM caddy:builder AS builder
 
 RUN xcaddy build \
