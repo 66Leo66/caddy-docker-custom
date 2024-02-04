@@ -13,6 +13,10 @@ RUN xcaddy build \
 # FROM caddy:alpine
 FROM caddy:${CADDY_VERSION}-alpine
 
+RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
+COPY root-ca.crt /usr/local/share/ca-certificates
+RUN update-ca-certificates
+
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
 
 CMD ["caddy", "docker-proxy"]
