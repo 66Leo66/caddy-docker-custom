@@ -1,6 +1,4 @@
-ARG CADDY_VERSION=2.10.2
-
-FROM caddy:${CADDY_VERSION}-builder-alpine AS builder
+FROM caddy:2.11.1-builder-alpine AS builder
 # FROM caddy:builder AS builder
 
 RUN xcaddy build \
@@ -9,7 +7,7 @@ RUN xcaddy build \
 
 
 # FROM caddy:alpine
-FROM caddy:${CADDY_VERSION}-alpine
+FROM caddy:2.11.1-alpine
 
 RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 COPY root-ca.crt /usr/local/share/ca-certificates
