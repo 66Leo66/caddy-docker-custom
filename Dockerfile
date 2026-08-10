@@ -5,7 +5,7 @@ RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
     --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
     --with github.com/WeidiDeng/caddy-cloudflare-ip \
-    --with https://github.com/greenpau/caddy-security
+    --with github.com/greenpau/caddy-security
 
 
 # FROM caddy:alpine
