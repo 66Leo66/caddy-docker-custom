@@ -3,7 +3,9 @@ FROM caddy:2.11.1-builder-alpine AS builder
 
 RUN xcaddy build \
     --with github.com/caddy-dns/cloudflare \
-    --with github.com/lucaslorentz/caddy-docker-proxy/v2
+    --with github.com/lucaslorentz/caddy-docker-proxy/v2 \
+    --with github.com/WeidiDeng/caddy-cloudflare-ip \
+    --with https://github.com/greenpau/caddy-security
 
 
 # FROM caddy:alpine
